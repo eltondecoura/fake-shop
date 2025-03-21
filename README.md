@@ -2,6 +2,8 @@
 
 Criação do Workflow no Github Action
 
+Pipeline CI/CD no diretório .github/workflows/.
+
 A açõao que irá disparar o Workflow será o push do código, assim que o push do código for feito o workflow será executado.
 
 ### Criação da Pipeline 
