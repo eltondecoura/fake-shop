@@ -9,7 +9,7 @@ A açõao que irá disparar o Workflow será o push do código, assim que o push
 ### Criação da Pipeline 
  CI:
 
- Etapas da Pipeline CI
+ Etapas do Pipeline CI
 
       - Obter Codigo
 
@@ -21,7 +21,7 @@ A açõao que irá disparar o Workflow será o push do código, assim que o push
 
 CD:
 
-Etapas da Pipeline CI
+Etapas do Pipeline CI
 
       - Obter Codigo
 
