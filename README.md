@@ -1,6 +1,6 @@
 # Dasafio CI/CD - Fake Shop
 
-- Criação do Workflow no Github Action
+Criação do Workflow no Github Action
 
 A açõao que irá disparar o Workflow será o push do código, assim que o push do código for feito o workflow será executado.
 
@@ -24,5 +24,5 @@ Etapas da Pipeline CI
       - Obter Codigo
 
       - Configurar o Kubeconfig
-      
+
       - Executar o apply
