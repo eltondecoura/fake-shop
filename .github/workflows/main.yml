@@ -21,18 +21,27 @@ jobs:
           context: .
           push: true
           file: ./src/Dockerfile
-          tags: eltondecoura/fake-shop-desafio:v${{ github_run_number }}
-          
-      - run: echo "Enviar a Imagem Docker para Docker Hub"
+          tags: |
+          eltondecoura/fake-shop-desafio:v${{ github_run_number }}
+          eltondecoura/fake-shop-desafio
+
 
   CD:
     needs: [CI]
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Obter Codigo"
-      - run: echo "Configurar o Kubeconfig"
-      - run: echo "Executar o apply"
+      - name: Obtendo o Codigo
+        uses: actions/checkout@v4
+  
+    - uses: azure/k8s-set-context@v4
+      with:
+        method: kubeconfig
+        kubeconfig: ${{ secrets.k8S_KUBECONFIG }}
 
+    - uses: Azure/k8s-deploy@v5
+      with:
+          manifests: ./deployment.yaml
+          images: eltondecoura/fake-shop-desafio:v${{ github_run_number }}
 
       
 
