@@ -6,14 +6,23 @@ A açõao que irá disparar o Workflow será o push do código, assim que o push
 
 ### Criação da Pipeline 
  CI:
+
  Etapas da Pipeline CI
+
       - Obter Codigo
+
       - Executar o Login no Docker
+
       - Executar o Docker Builder
+
       - Enviar a Imagem Docker para Docker Hub
 
 CD:
+
 Etapas da Pipeline CI
+
       - Obter Codigo
+
       - Configurar o Kubeconfig
+      
       - Executar o apply
